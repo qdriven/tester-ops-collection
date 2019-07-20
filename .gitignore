@@ -1,2 +1,3 @@
 components/
 roles/jmeter/files/candybox/*
+dockers/mysql/qe-mysql-data/*

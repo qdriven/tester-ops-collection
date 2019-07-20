@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+   db:
+     label: promotion-dbs
+     name: qe-local-mysql
+     image: mysql:latest
+     volumes:
+       - ./qe-mysql-data:/var/lib/mysql
+     restart: always
+     ports:
+        - 3306:3306
+     environment:
+       MYSQL_ROOT_PASSWORD: qa123456
+       MYSQL_DATABASE: qa
+       MYSQL_USER: qa
+       MYSQL_PASSWORD: qa123456
+
+# volumns:
+#   - data: {}
