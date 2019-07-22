@@ -23,6 +23,6 @@
         chdir: "{{workspace}}/support_server"
       tags:
         - start_app
-              # sudo: yes
+      # sudo: yes
     - name: kill java-app
       shell: ps aux| grep support_server | grep -v "grep" | awk '{print $2}' | xargs kill -9
