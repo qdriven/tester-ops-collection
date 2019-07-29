@@ -1,0 +1,15 @@
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Ensure Docker image is built from the base Dockerfile.
+      docker_image:
+        name: base
+        path: local 
+        state: build
+
+    - name: Ensure the test container is running.
+      docker_container:
+        image: base:latest
+        name: base
+        state: started
