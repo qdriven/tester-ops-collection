@@ -2,8 +2,6 @@ version: '3.3'
 
 services:
    db:
-     label: promotion-dbs
-     name: qe-local-mysql
      image: mysql:latest
      volumes:
        - ./qe-mysql-data:/var/lib/mysql
