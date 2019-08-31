@@ -44,5 +44,5 @@ services:
     entrypoint: |
       bash -c 'bash -s <<EOF
       trap "break;exit" SIGHUP SIGINT SIGTERM
-      sudo sysctl -w vm.max_map_count=262144 && ./bin/run.sh
+      sysctl -w vm.max_map_count=262144 && ./bin/run.sh
       EOF'
