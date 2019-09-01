@@ -13,6 +13,4 @@ services:
        MYSQL_DATABASE: qa
        MYSQL_USER: qa
        MYSQL_PASSWORD: qa123456
-
-# volumns:
-#   - data: {}
+       command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci #设置utf8字符集s
