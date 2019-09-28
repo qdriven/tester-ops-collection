@@ -5,6 +5,7 @@ services:
      image: mysql:latest
      volumes:
        - ./qe-mysql-data:/var/lib/mysql
+      #  - ./mysqld.cnf::/etc/mysql/mysql.conf.d/mysqld.cnf
      restart: always
      ports:
         - 3306:3306
@@ -13,4 +14,4 @@ services:
        MYSQL_DATABASE: qa
        MYSQL_USER: qa
        MYSQL_PASSWORD: qa123456
-       command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci #设置utf8字符集s
+       command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci #设置utf8字符集
