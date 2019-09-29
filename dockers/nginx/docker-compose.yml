@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  nginx:
+    image: nginx
+    container_name: tops-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./data/nginx/conf.d:/etc/nginx/conf.d
+      - ./data/nginx/data:/data
+    restart: always
