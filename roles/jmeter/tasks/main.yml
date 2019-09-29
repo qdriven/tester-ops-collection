@@ -16,8 +16,8 @@
       copy:
         src: ../files/candybox/run_jmeter.sh
         dest: "{{ workspace }}/candybox"
-    # - name: run jmeter scripts
-    #   shell: sh run_jmeter.sh
-    #   args:
-    #     chdir: /data/candybox
-    #   sudo: yes
+    - name: run jmeter scripts
+      shell: sh run_jmeter.sh
+      args:
+        chdir: /data/candybox
+      sudo: yes

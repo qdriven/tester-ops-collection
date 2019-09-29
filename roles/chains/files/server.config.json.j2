@@ -1,0 +1,38 @@
+{
+  "ServerConfig": {
+    "HttpLocalIp": "127.0.0.1",
+    "HttpRestPort": 20443,
+    "RestClientAddr": "127.0.0.1:8443",
+    "SigServerUrl": "127.0.0.1:21443",
+    "HttpCertPath": "./cert_private/ssl.crt",
+    "HttpKeyPath": "./cert_private/ssl.key"
+  },
+  "DBConfig": {
+    "UserName": "root",
+    "Password": "ont",
+    "DBAddr": "139.219.140.190:3306",
+    "DBName": "wallet"
+  },
+  "CCConfig": {
+    "RedisAddr": "42.159.157.100:20337",
+    "Password": "123456"
+  },
+  "Bnb": {
+    "NodeAddr": "tcp://data-seed-pre-0-s1.binance.org:80",
+    "ChainId": "Binance-Chain-Nile",
+    "ConfirmedBlockNum": 10,
+    "TransferFee": "0.000375",
+    "MultiSendFee": "0.0003",
+    "Coins": {
+      "BNB": {
+        "CoinType": "BNB",
+        "Threshold": "1"
+      },
+      "TEST-30E": {
+        "CoinType": "COS",
+        "Threshold": "10"
+      }
+    },
+    "CapitalAddr": "tbnb19wq2yyrfz036nl44fkh0zuhnltuheqmrky2ezs"
+  }
+}
