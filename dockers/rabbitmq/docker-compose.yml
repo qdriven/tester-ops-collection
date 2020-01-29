@@ -9,7 +9,7 @@ services:
     ports:
       - '15672:15672'
     volumes:
-      - 'rabbitmqstats_data:/bitnami'
+      - 'data:/bitnami'
   queue-disc1:
     image: bitnami/rabbitmq:3.7
     environment:
@@ -18,7 +18,7 @@ services:
       - RABBITMQ_CLUSTER_NODE_NAME=rabbit@stats
       - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
     volumes:
-      - 'rabbitmqdisc1_data:/bitnami'
+      - 'disc1_data:/bitnami'
   queue-ram1:
     image: bitnami/rabbitmq:3.7
     environment:
@@ -27,12 +27,12 @@ services:
       - RABBITMQ_CLUSTER_NODE_NAME=rabbit@stats
       - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
     volumes:
-      - 'rabbitmqram1_data:/bitnami'
+      - 'ram1_data:/bitnami'
 
 volumes:
-  rabbitmqstats_data:
+  data:
     driver: local
-  rabbitmqdisc1_data:
+  disc1_data:
     driver: local
-  rabbitmqram1_data:
+  ram1_data:
     driver: local

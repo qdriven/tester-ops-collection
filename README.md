@@ -25,3 +25,10 @@ And Also some intro documentation
 ## Docker Compose Files
 
 - [SONAR](dockers/sonar/doocker-compose.yml)
+
+## Docker for rabbitmq
+
+- [rabbitmq](dockers/rabbitma/docker-compose.yml)
+
+## References
+
