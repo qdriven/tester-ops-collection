@@ -3,8 +3,8 @@ FROM centos:7.4.1708
 ENV LANGUAGE=en_US.UTF-8 LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 \
     DEFAULT_USER=tux \
     VOLUME_LOGS=/volume_logs VOLUME_DATA=/volume_data \
-    HOME=/root \
-    RESOURCES_SERVER= <to_be_changed>
+    HOME=/root 
+    # RESOURCES_SERVER= 
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     groupadd -g 1996 ${DEFAULT_USER} && useradd -u 1996 -g 1996 ${DEFAULT_USER} && \

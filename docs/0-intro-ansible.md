@@ -5,6 +5,11 @@ Ansible是什么:
 - 可以同时操作多台机器
 - 可以预先设置好脚本，进行多台机器部署安装
 
+## Ansible Installation
+
+```sh
+pip install ansible
+```
 
 ## Ansible 访问远程机器
 
@@ -14,7 +19,7 @@ ansible -m ping all -i hosts
 
 ping所有的远程机器
 
-## Ansible的基本概念 
+## Ansible playbook 的基本概念 
 
 - inventory: ansible需要管理的机器
 - vars: 变量

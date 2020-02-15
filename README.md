@@ -4,7 +4,9 @@ Tester Daily Scripts for managing testing environment
 
 - Ansible Playbooks
 - Docker Composer Files
-- K8S 
+- K8S
+- adhoc shell scripts in daily basis
+- useful test/ops python scripts
 
 And Also some intro documentation
 
@@ -40,5 +42,19 @@ pip install ansible
 
 - [mongo db](dockers/mongo)
 
+## Docker for gitlab
+
+- [Gitlab](dockers/gitlab)
+
+## Docker for Jenkins
+
+- [Jenkins/blueocean](dockers/jenkins-slave)
+
+## Docker for Sonar 
+
+- [Sonar](dockers/sonar)
+
 ## References
+
+- https://github.com/sameersbn/docker-gitlab.git
 
