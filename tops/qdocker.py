@@ -38,3 +38,10 @@ def get_images():
 
 def pull_image(image_name):
     return client.images.pull(image_name)
+
+def stop_container(container_name):
+    container = client.containers.get(container_id=container_name)
+    container.stop()
+
+if __name__ == '__main__':
+    get_images()

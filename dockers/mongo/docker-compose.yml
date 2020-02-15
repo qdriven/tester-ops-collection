@@ -7,9 +7,3 @@ services:
     volumes:
       - ./data/db:/data/db
       - ./data/configdb:/data/configdb
-    networks:
-      - db_tops
-
-networks:
-  db_tops:
-    name: dbtops_net

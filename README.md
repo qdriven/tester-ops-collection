@@ -8,6 +8,12 @@ Tester Daily Scripts for managing testing environment
 
 And Also some intro documentation
 
+## Install ansible 
+
+```sh
+pip install ansible
+```
+
 ## Base Docker Images
 
 [Base Docker Image Docker Files](dockers/)
@@ -28,7 +34,11 @@ And Also some intro documentation
 
 ## Docker for rabbitmq
 
-- [rabbitmq](dockers/rabbitma/docker-compose.yml)
+- [rabbitmq](dockers/rabbitmq/docker-compose.yml)
+
+## Docker for MongoDB
+
+- [mongo db](dockers/mongo)
 
 ## References
 

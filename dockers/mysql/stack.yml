@@ -4,7 +4,7 @@ services:
   db:
     image: mysql:latest
     volumes:
-      - :/var/lib/mysql
+      - ./qe-mysql-data:/var/lib/mysql
     restart: always
     ports:
       - 3306:3306
@@ -13,4 +13,5 @@ services:
       MYSQL_DATABASE: qmeta
       MYSQL_USER: qmeta
       MYSQL_PASSWORD: qa123456
-      command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password #设置utf8字符集
+      command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
+      #设置utf8字符集
