@@ -53,7 +53,8 @@ Please Refer:
 - QA
 - PROD
 
-In Every Stage:
+In every Stage:
+
 - CHECKOUT
 - BUILD
 - TEST

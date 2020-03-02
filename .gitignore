@@ -5,3 +5,4 @@ dockers/mysql/qe-mysql-data/*
 dockers/sonar/data/*
 dockers/sonar/postgre/*
 dockers/*/data/*
+jenkins.war

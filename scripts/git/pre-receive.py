@@ -82,5 +82,3 @@ else:
     print "2.描述b;"
     print "3.描述c;"
     print "提示：gitbash可以通过git commit --amend可以修改注释，sourceTree可以使用提交选项-修改最后一次提交。"
-    exit(1)
-© 2020 GitHub, Inc.
