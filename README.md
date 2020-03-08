@@ -58,3 +58,14 @@ pip install ansible
 
 - https://github.com/sameersbn/docker-gitlab.git
 
+
+### scripts:
+
+Collections of tester scripts to get things done.
+
+## Scripts Collections
+
+- [Generate QR Code](../tops/utils/qr_codes.py) 生成QRCode
+- [Allure Report to Excel](../tops/test_result_converter.py) AllureTestReporterConverter
+- [Generate TPS Chart] () TPS Chart Generator
+

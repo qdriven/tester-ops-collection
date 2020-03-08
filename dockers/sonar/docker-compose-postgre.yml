@@ -9,8 +9,8 @@ services:
       - POSTGRES_USER=sonar
       - POSTGRES_PASSWORD=sonar
     volumes:
-      - ./postgre:/var/lib/postgresql
-      - ./postgre/data:/var/lib/postgresql/data
+      - /data/sonar-postgre:/var/lib/postgresql
+      - /data/sonar-postgre/data:/var/lib/postgresql/data
 
   sonar_server:
     image: sonarqube
