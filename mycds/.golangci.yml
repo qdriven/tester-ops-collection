@@ -1,0 +1,15 @@
+# https://github.com/golangci/golangci/wiki/Configuration
+
+service:
+  prepare:
+    - apt-get update && apt-get install -y libsecret-1-dev
+    - go get github.com/labstack/echo
+    - go get github.com/fsamin/smtp
+
+run:
+  skip-dirs:
+    - ui
+    - doc
+    - tests
+  skip-files:
+    - ".*_test.go$"
