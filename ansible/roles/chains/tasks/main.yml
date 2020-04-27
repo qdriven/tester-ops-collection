@@ -9,6 +9,3 @@
         dest: "{{chain_home}}"
       tags:
         - pass_chain_files
-
-      
-
