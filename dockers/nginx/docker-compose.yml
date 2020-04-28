@@ -6,6 +6,6 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./data/nginx/conf.d:/etc/nginx/conf.d
-      - ./data/nginx/data:/data
+      - ./conf/conf.d:/etc/nginx/conf.d
+      - ./conf/data:/data
     restart: always
