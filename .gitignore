@@ -3,6 +3,10 @@ roles/jmeter/files/candybox/*
 dockers/mysql/qe-mysql-data/*
 *.jar
 dockers/sonar/data/*
+dockers/mongo/data/*
 dockers/sonar/postgre/*
 dockers/*/data/*
 jenkins.war
+.DS_Store
+*/.DS_Store
+*/*/.DS_store

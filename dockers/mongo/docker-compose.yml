@@ -3,7 +3,8 @@ services:
   mongodb:
     image: mongo:latest
     container_name: tops-mongo
-    ports: "27017:27017"
+    ports: 
+      - 27017:27017
     volumes:
       - ./data/db:/data/db
       - ./data/configdb:/data/configdb
