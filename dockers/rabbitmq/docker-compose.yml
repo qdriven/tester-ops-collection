@@ -1,38 +1,16 @@
-version: '3.3'
-services:
-  stats:
-    image: bitnami/rabbitmq:3.7
-    environment:
-      - RABBITMQ_NODE_TYPE=stats
-      - RABBITMQ_NODE_NAME=rabbit@stats
-      - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
-    ports:
-      - '15672:15672'
-    volumes:
-      - 'data:/bitnami'
-  queue-disc1:
-    image: bitnami/rabbitmq:3.7
-    environment:
-      - RABBITMQ_NODE_TYPE=queue-disc
-      - RABBITMQ_NODE_NAME=rabbit@queue-disc1
-      - RABBITMQ_CLUSTER_NODE_NAME=rabbit@stats
-      - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
-    volumes:
-      - 'disc1_data:/bitnami'
-  queue-ram1:
-    image: bitnami/rabbitmq:3.7
-    environment:
-      - RABBITMQ_NODE_TYPE=queue-ram
-      - RABBITMQ_NODE_NAME=rabbit@queue-ram1
-      - RABBITMQ_CLUSTER_NODE_NAME=rabbit@stats
-      - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
-    volumes:
-      - 'ram1_data:/bitnami'
+version: '3'
 
-volumes:
-  data:
-    driver: local
-  disc1_data:
-    driver: local
-  ram1_data:
-    driver: local
+services:
+  rabbit:
+    image: rabbitmq:3.7-management
+    hostname: rabbit
+    container_name: "rabbitmq_3_7"
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=123456
+    volumes:
+      - ./data:/var/lib/rabbitmq

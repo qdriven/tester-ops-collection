@@ -1,27 +1,18 @@
-# docker-compose.yml文件的版本
-version: "3.3"
-# 管理的服务
-services:
-  redis:
-    # 指定镜像
-    image: redis:latest
-    ports:
-      # 端口映射
-      - 6379:6379
-    volumes:
-      # 目录映射
-      - "${REDIS_DIR}/conf:/usr/local/etc/redis"
-      - "${REDIS_DIR}/data:/data"
-    command: ["redis-server","appendonly","yes"，“requirepass”，“123456”]
-    # --requirepass 123456
+version: '3'
 
-#   mysql:
-#     image: mysql:latest
-#     ports:
-#       - 3306:3306
-#     volumes:
-#       - "${MYSQL_DIR}/data:/var/lib/mysql"
-#       - "${MYSQL_DIR}/conf.d:/etc/mysql/conf.d"
-#     environment:
-#       # 环境变量
-#       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+services: 
+  redis:
+    image: redis:3
+    container_name: "redis3"
+    restart: always
+    ports:
+      - 6379:6379
+    volumes: 
+      - ./data:/data
+    networks:
+      - "redisnet"
+    # command: redis-server --appendonly yes
+
+networks: 
+  redisnet: 
+    driver: bridge
