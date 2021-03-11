@@ -1,1 +1,5 @@
-postgres-data
+.DS_Store
+*_data
+cassandra_db
+data
+.env
