@@ -1,6 +1,7 @@
 components/
 roles/jmeter/files/candybox/*
 dockers/mysql/qe-mysql-data/*
+dockers/redash/postgres-data/*
 *.jar
 dockers/sonar/data/*
 dockers/mongo/data/*
