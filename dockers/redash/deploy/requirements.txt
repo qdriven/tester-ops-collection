@@ -25,7 +25,7 @@ idna==2.8
     # via requests
 iniconfig==1.1.1
     # via pytest
-jinja2==2.10.1
+jinja2==2.11.3
     # via salt-ssh
 lxml==4.6.3
     # via ocdsindex
