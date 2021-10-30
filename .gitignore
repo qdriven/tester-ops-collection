@@ -11,3 +11,5 @@ jenkins.war
 .DS_Store
 */.DS_Store
 */*/.DS_store
+dockers/appsmith/stacks
+dockers/sqlpad/sqlpad
