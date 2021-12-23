@@ -13,3 +13,4 @@ jenkins.war
 */*/.DS_store
 dockers/appsmith/stacks
 dockers/sqlpad/sqlpad
+data/
