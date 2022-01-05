@@ -14,3 +14,4 @@ jenkins.war
 dockers/appsmith/stacks
 dockers/sqlpad/sqlpad
 data/
+references/*
