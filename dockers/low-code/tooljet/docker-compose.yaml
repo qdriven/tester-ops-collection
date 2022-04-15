@@ -52,7 +52,7 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /opt/data/postgres_data
+      device: ~/data/postgres/tooljet
   certs:
     driver: local
     driver_opts:

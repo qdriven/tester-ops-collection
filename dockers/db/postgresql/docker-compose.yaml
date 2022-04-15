@@ -10,7 +10,20 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeit}
     volumes:
-       - ~/data/postgres:/data/postgres
+       - ~/data/postgres/appsmith:/var/lib/postgresql/data
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     restart: unless-stopped
+
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   ports:
+  #     - 15433:80
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - database
+  #   networks:
+  #     - postgres-network
+  #   volumes:
+  #     - ./pgadmin-data/:/var/lib/pgadmin/
