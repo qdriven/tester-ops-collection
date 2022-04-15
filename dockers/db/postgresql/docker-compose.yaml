@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:latest
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeit}
+    volumes:
+       - ~/data/postgres:/data/postgres
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    restart: unless-stopped
