@@ -1,3 +1,0 @@
-# QuestDB
-
-A Timeseries Database

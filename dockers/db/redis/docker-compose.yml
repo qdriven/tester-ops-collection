@@ -8,11 +8,5 @@ services:
     ports:
       - 6379:6379
     volumes: 
-      - ./data:/data
-    networks:
-      - "redisnet"
+      - ~/data/redis:/data
     command: redis-server --appendonly yes
-
-networks: 
-  redisnet: 
-    driver: bridge
